@@ -26,7 +26,7 @@ app.post("/summarize",async(req, res)=>{
         temperature: 0.3,
       }
     }); 
-    const result = await chat.sendMessageStream(`Summarize this news in few sentenses but make it short as possible: \n\n${text}`);
+    const result = await chat.sendMessageStream(`(explain in very simple words)Summarize this news in few sentenses but make it short as possible: \n\n${text}`);
 
     let summary = "";
         for await (const chunk of result.stream) {
