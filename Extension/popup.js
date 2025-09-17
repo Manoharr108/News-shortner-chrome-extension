@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let textArea = document.getElementById("textOutput");
 
-    chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    chrome.runtime.onMessage.addListener((message) => {
         if (message.extractedText) {
             document.getElementById("loader").style.display = "none"
             textArea.style.display = "block"

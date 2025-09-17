@@ -1,9 +1,8 @@
 if (!window.hasRun) {
     window.hasRun = true;
-
     async function summarizeText(text) {
         try {
-            const response = await fetch("http://localhost:3000/summarize", {
+            const response = await fetch("https://news-shortner-chrome-extension.vercel.app/summarize", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ text }),
