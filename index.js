@@ -14,7 +14,7 @@ app.post("/summarize", async (req, res) => {
   if (!text) return res.status(400).json({ message: "No text received!" });
 
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
     const chat = model.startChat({
       history: [],
       generationConfig: {
